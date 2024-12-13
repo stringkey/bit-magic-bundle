@@ -32,7 +32,11 @@ Include the minimum required bundles
 composer require maker orm form validator twig-bundle security-csrf
 ```
 
-Setup a database connection string
+Setup the database connection string, since the bundle works with standard integer types there should be no issues with any database
+create a .env.local file 
+```shell
+cp .env .env.local
+```
 
 And create the database
 ```shell
