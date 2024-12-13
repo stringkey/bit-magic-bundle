@@ -57,6 +57,10 @@ class BitMaskType extends AbstractType
             return true;
         });
 
+        $resolver->setNormalizer('enable_mask', function (OptionsResolver $options, ?string $value): int {
+            return intval($value);
+        });
+
         // Only sensible combination is showing a list of checkboxes per bit
         $resolver->setAllowedValues('expanded', [true]);
         $resolver->setAllowedValues('multiple', [true]);
