@@ -20,5 +20,8 @@
         "psr-4": {
             "Stringkey\\BitMagicBundle\\": "src/"
         }
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^7.2"
     }
 }
