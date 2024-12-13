@@ -1,6 +1,6 @@
 <?php
 
-namespace Stringkey\MapperBundle\DependencyInjection;
+namespace Stringkey\BitMagicBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
