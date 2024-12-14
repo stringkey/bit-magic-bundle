@@ -10,16 +10,6 @@ Run
 composer require stringkey/bit-magic-bundle
 ```
 
-As long as the bundle is not yet in packagist, the following code needs to be added to package.json
-```json lines
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/stringkey/bit-magic-bundle.git"
-        }
-    ],
-```
-
 ## Creating a Symfony 6.4 demo app
 
 Create a new Symfony 6.4 LTS project
