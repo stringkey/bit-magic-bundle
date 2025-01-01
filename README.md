@@ -5,7 +5,7 @@ Toolkit to manipulate bitfields in code and symfony forms
 # Using the bundle
 
 ## Installation
-Run 
+To include the bundle in your Symfony 6.4 LTS or Symfony 7 project, run: 
 ```shell
 composer require stringkey/bit-magic-bundle
 ```
