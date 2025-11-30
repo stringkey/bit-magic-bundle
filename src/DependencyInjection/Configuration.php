@@ -7,19 +7,8 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('stringkey_mapper');
-//        $rootNode = $treeBuilder->getRootNode();
-//        $rootNode->
-//             children()
-//                ->booleanNode('default_option')
-//                    ->defaultTrue()
-//                ->end()
-//                ->booleanNode('optional_option')
-//                ->end()
-//            ->end();
-
-        return $treeBuilder;
+        return new TreeBuilder('stringkey_mapper');
     }
 }

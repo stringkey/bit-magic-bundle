@@ -20,26 +20,20 @@ class BitmaskToArrayTransformer implements DataTransformerInterface
     /**
      * @inheritdoc
      */
-    public function transform($value)
+    public function transform($value): array
     {
-        $transformedValue = [];
-
-        foreach ($this->choices as $label => $bit) {
-            if (boolval($value & $bit)) {
-                $transformedValue[$label] = $bit;
-            }
-        }
-
-        return $transformedValue;
+        return array_filter($this->choices, function ($bit) use ($value) {
+            return $value & $bit;
+        });
     }
 
     /**
      * @inheritdoc
      */
-    public function reverseTransform($value)
+    public function reverseTransform($value): int
     {
-        /** @var int $transformedValue */
         $transformedValue = 0;
+
         foreach ($value as $label => $bit) {
             $transformedValue |= $bit;
         }
